@@ -6,12 +6,14 @@ module.exports = merge(common, {
   mode: 'development',
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'static/js/bundle.js',
     chunkFilename: 'static/js/[name].chunk.js',
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
     hot: true,
     port: 3000,
   },
