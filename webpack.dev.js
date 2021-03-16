@@ -10,7 +10,7 @@ module.exports = merge(common, {
     filename: 'static/js/bundle.js',
     chunkFilename: 'static/js/[name].chunk.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     historyApiFallback: true,
